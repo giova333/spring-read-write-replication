@@ -1,0 +1,29 @@
+datasources:
+  routing-strategy: transaction
+  replicas:
+    write:
+      jdbcUrl: jdbc:mysql://localhost:3307/test
+      driver-class-name: com.mysql.jdbc.Driver
+      username: user
+      password: password
+    read:
+      jdbcUrl: jdbc:mysql://localhost:3308/test
+      driver-class-name: com.mysql.jdbc.Driver
+      username: user
+      password: password
+
+spring:
+  flyway:
+    url: jdbc:mysql://localhost:3307/test
+    user: user
+    password: password
+logging:
+  level:
+    com.gladunalexander: debug
+
+
+
+
+
+
+
